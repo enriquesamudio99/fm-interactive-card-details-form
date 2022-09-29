@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta name="description" content="Interactive card details form">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link rel="stylesheet" href="./assets/style/styles.css">
+
+</head>
+<body>
+
+    <main class="main container">
+
+        <div class="images">
+            <div class="images__container">
+                <div class="back-card">
+                    <p class="back-card__cvc" id="cardImgCVC">000</p>
+                </div>
+                
+                <div class="front-card">
+                    <img src="./assets/images/card-logo.svg" alt="Card Logo" class="front-card__icon">
+                    <p class="front-card__number" id="cardImgNumber">0000 0000 0000 0000</p>
+                    <p class="front-card__name" id="cardImgName">Jane Appleseed</p>
+                    <p class="front-card__expired">
+                        <span id="cardImgMonth">00</span>/<span id="cardImgYear">00</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container">
+
+            <form class="form" id="form">
+                <div class="form__inputs">
+                    <div class="form__input">
+                        <label for="name" class="form__label">Cardholder Name</label>
+                        <input type="text" id="name" name="name" class="form__control" placeholder="e.g. Jane Appleseed">
+                        <span class="form__error-msg"></span>
+                    </div>
+                    <div class="form__input">
+                        <label for="number" class="form__label">Card Number</label>
+                        <input type="text" id="number" name="number" class="form__control" placeholder="e.g. 1234 5678 9123 0000">
+                        <span class="form__error-msg"></span>
+                    </div>
+                    <div class="form__details">
+                        <div class="form__details-exp" id="formDetailsExp">
+                            <label for="monthExp" class="form__details-exp__label">Exp. Date (MM/YY)</label>
+                            <div class="form__input">
+                                <input type="number" maxlength="2" id="monthExp" name="monthExp" class="form__control" placeholder="MM">
+                                <span class="form__error-msg form__error-msg--details">Can't be blank</span>
+                            </div>
+                            <div class="form__input">
+                                <input type="number" maxlength="2" id="yearExp" name="yearExp" class="form__control" placeholder="YY">
+                                <span class="form__error-msg form__error-msg--details">Can't be blank</span>
+                            </div>
+                        </div>
+                        <div class="form__input">
+                            <label for="cvc" class="form__label">CVC</label>
+                            <input type="text" name="cvc" id="cvc" class="form__control" placeholder="e.g. 123">
+                            <span class="form__error-msg"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--form" type="submit">Confirm</button>
+            </form>
+
+            <div class="completed" id="completed"> 
+                <img src="./assets/images/icon-complete.svg" alt="Completed Icon" class="completed__img">  
+                <h2 class="completed__title">Thank you!</h2>
+                <p class="completed__subtitle">We've added your card details</p>
+                <button class="btn btn--completed" type="button" id="continueBtn">Continue</button>
+            </div>
+
+        </div>
+    </main>
+    <script src="./assets/app.js"></script>
+</body>
+</html>
