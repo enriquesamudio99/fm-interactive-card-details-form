@@ -105,6 +105,7 @@ input[type=number] {
     width: 100%;
     height: 100%;
     position: relative;
+    filter: drop-shadow(0px 39px 60px rgba(0, 0, 0, 0.142481));
 }
 
 @media (min-width: 576px) {
@@ -142,7 +143,7 @@ input[type=number] {
         width: 447px;
         height: 245px;
         bottom: 0;
-        right: -13.875rem;
+        right: -15.313rem;
     }
 }
 
@@ -182,7 +183,7 @@ input[type=number] {
         height: 245px;
         left: unset;
         top: 0;
-        right: -8rem;
+        right: -9.438rem;
         bottom: unset;
     }
 }
@@ -347,12 +348,25 @@ input[type=number] {
     position: relative;
 }
 
+@media (min-width: 1200px) {
+    .form__details {
+        grid-template-columns: 170px 1fr;
+        column-gap: 1.25rem;
+    }
+}
+
 .form__details-exp {
     padding-top: 1.5rem;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     column-gap: 0.5rem;
     position: relative;
+}
+
+@media (min-width: 1200px) {
+    .form__details-exp {
+        column-gap: 0.625rem;
+    }
 }
 
 .form__details-exp--error {

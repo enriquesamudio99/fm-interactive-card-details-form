@@ -212,7 +212,7 @@ const validateCardDateExp = () => {
 
     }
 
-    if (monthValue < 0 || monthValue > 12) {
+    if (monthValue < 1 || monthValue > 12) {
         
         formDetailsExp.classList.add("form__details-exp--error");
         monthInput.classList.add('form__control--invalid');
